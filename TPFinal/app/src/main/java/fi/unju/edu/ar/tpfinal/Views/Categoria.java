@@ -10,7 +10,7 @@ import fi.unju.edu.ar.tpfinal.Interfaces.CategoriaPresenter;
 import fi.unju.edu.ar.tpfinal.Interfaces.CategoriaView;
 import fi.unju.edu.ar.tpfinal.Presenters.CategoriaPresenterImpl;
 import fi.unju.edu.ar.tpfinal.R;
-
+//Otro comentario
 public class Categoria extends AppCompatActivity  implements CategoriaView {
     private EditText nombre;
     private CategoriaPresenter categoriaPresenter;
