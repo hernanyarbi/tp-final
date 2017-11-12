@@ -1,12 +1,13 @@
 package fi.unju.edu.ar.tpfinal.Models;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
  * Created by joel on 06/11/2017.
  */
 
-public class Producto {
+public class Producto implements Serializable{
     private Integer id;
     private String nombre;
     private String unidad;
