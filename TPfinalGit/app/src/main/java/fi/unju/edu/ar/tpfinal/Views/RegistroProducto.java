@@ -38,6 +38,7 @@ public class RegistroProducto extends AppCompatActivity implements ProductoView{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.agregar_producto);
+
         productoPresenter = new ProductoPresenterImp(this);
         nombre = (EditText)findViewById(R.id.txtNobreProd);
         cantidad = (EditText)findViewById(R.id.txtCantidad);

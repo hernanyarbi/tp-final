@@ -6,7 +6,7 @@ import android.database.sqlite.SQLiteDatabase;
 import fi.unju.edu.ar.tpfinal.Interfaces.LoginInteractor;
 import fi.unju.edu.ar.tpfinal.Interfaces.LoginPresenter;
 import fi.unju.edu.ar.tpfinal.OpenHelper.SQLiteUtils;
-import fi.unju.edu.ar.tpfinal.OpenHelper.UserSQLite;
+import fi.unju.edu.ar.tpfinal.OpenHelper.AppSQLite;
 import fi.unju.edu.ar.tpfinal.Views.Login;
 
 /**
@@ -20,7 +20,7 @@ public class LoginInteractorImpl implements LoginInteractor {
     public void validUser(String pass, LoginPresenter loginPresenter, Login login) {
         try {
             if(!pass.equals("")){
-                UserSQLite conexion = new UserSQLite(login, SQLiteUtils.DB, null, 1);
+                AppSQLite conexion = new AppSQLite(login, SQLiteUtils.DB, null, 1);
                 SQLiteDatabase db = conexion.getReadableDatabase();
 
                 String[] parametros = {pass};
@@ -46,7 +46,7 @@ public class LoginInteractorImpl implements LoginInteractor {
 
     @Override
     public Boolean userExist(LoginPresenter loginPresenter, Login login) {
-        UserSQLite conexion = new UserSQLite(login, SQLiteUtils.DB, null, 1);
+        AppSQLite conexion = new AppSQLite(login, SQLiteUtils.DB, null, 1);
         SQLiteDatabase db = conexion.getReadableDatabase();
 
         try {

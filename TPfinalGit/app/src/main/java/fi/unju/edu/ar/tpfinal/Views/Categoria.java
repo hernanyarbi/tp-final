@@ -11,6 +11,8 @@ package fi.unju.edu.ar.tpfinal.Views;
         import fi.unju.edu.ar.tpfinal.Presenters.CategoriaPresenterImpl;
         import fi.unju.edu.ar.tpfinal.R;
 
+//Otro comentario
+//Clase de la vista Categoria
 public class Categoria extends AppCompatActivity  implements CategoriaView {
     private EditText nombre;
     private CategoriaPresenter categoriaPresenter;

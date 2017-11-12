@@ -48,10 +48,11 @@ public class SQLiteUtils {
      * Utils de tabla categories
      */
 
-    public static final String CATEGORIES_TABLE = "CREATE TABLE categories(id_category INTEGER PRIMARY KEY" +
+    public static final String CATEGORIES_TABLE = "CREATE TABLE categories (id_category INTEGER PRIMARY KEY " +
             "AUTOINCREMENT, name TEXT)";
     public static final String ID_CAT= "id_category";
     public  static final  String CATEGORIES = "categories";
+    public  static final  String NAME_CATEGORY = "name";
 
 
 

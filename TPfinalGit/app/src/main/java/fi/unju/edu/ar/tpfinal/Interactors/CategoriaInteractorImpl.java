@@ -6,8 +6,8 @@ import android.widget.Toast;
 
 import fi.unju.edu.ar.tpfinal.Interfaces.CategoriaInteractor;
 import fi.unju.edu.ar.tpfinal.Interfaces.CategoriaPresenter;
-import fi.unju.edu.ar.tpfinal.OpenHelper.CategorySQLite;
 import fi.unju.edu.ar.tpfinal.OpenHelper.SQLiteUtils;
+import fi.unju.edu.ar.tpfinal.OpenHelper.AppSQLite;
 import fi.unju.edu.ar.tpfinal.Views.Categoria;
 
 /**
@@ -21,11 +21,12 @@ public class CategoriaInteractorImpl implements CategoriaInteractor{
     @Override
     public void agregar(String nombre, Categoria categoria, CategoriaPresenter categoriaPresenter) {
         if (!nombre.isEmpty()) {
-            CategorySQLite con = new CategorySQLite(categoria,SQLiteUtils.DB,null,1);
+            AppSQLite con = new AppSQLite(categoria,SQLiteUtils.DB,null,1);
             ContentValues val = new ContentValues();
             SQLiteDatabase db = con.getWritableDatabase();
 
             try {
+                val.put(SQLiteUtils.NAME_CATEGORY, nombre);
                 Long response = db.insert(SQLiteUtils.CATEGORIES,SQLiteUtils.ID_CAT,val);
                 Toast.makeText(categoria.getApplicationContext(), "Categoria agregado correctamente",Toast
                         .LENGTH_LONG).show();

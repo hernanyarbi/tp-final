@@ -1,10 +1,12 @@
 package fi.unju.edu.ar.tpfinal.Models;
 
+import java.io.Serializable;
+
 /**
  * Created by HSoft on 6/11/2017.
  */
 
-public class Category {
+public class Category implements Serializable {
 
     private Integer id;
     private String name;

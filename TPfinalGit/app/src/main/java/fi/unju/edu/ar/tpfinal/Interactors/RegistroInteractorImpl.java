@@ -7,7 +7,7 @@ import android.widget.Toast;
 import fi.unju.edu.ar.tpfinal.Interfaces.RegistroInteractor;
 import fi.unju.edu.ar.tpfinal.Interfaces.RegistroPresenter;
 import fi.unju.edu.ar.tpfinal.OpenHelper.SQLiteUtils;
-import fi.unju.edu.ar.tpfinal.OpenHelper.UserSQLite;
+import fi.unju.edu.ar.tpfinal.OpenHelper.AppSQLite;
 import fi.unju.edu.ar.tpfinal.Views.Registro;
 
 /**
@@ -19,7 +19,7 @@ public class RegistroInteractorImpl implements RegistroInteractor {
     public void agragarUsuario(String user, String name, String mail, String pass,
                                RegistroPresenter registroPresenter, Registro registro) {
 
-        UserSQLite conexion = new UserSQLite(registro, SQLiteUtils.DB,null,1);
+        AppSQLite conexion = new AppSQLite(registro, SQLiteUtils.DB,null,1);
         SQLiteDatabase db = conexion.getWritableDatabase();
         ContentValues values = new ContentValues();
         if (!user.equals("") && !name.equals("") && !mail.equals("") && !pass.equals("")) {

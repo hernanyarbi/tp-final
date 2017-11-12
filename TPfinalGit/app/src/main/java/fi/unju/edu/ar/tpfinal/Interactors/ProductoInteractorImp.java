@@ -7,8 +7,8 @@ import android.widget.Toast;
 import fi.unju.edu.ar.tpfinal.Interfaces.ProductoInteractor;
 import fi.unju.edu.ar.tpfinal.Interfaces.ProductoPresenter;
 import fi.unju.edu.ar.tpfinal.Models.Producto;
-import fi.unju.edu.ar.tpfinal.OpenHelper.ProductSQLite;
 import fi.unju.edu.ar.tpfinal.OpenHelper.SQLiteUtils;
+import fi.unju.edu.ar.tpfinal.OpenHelper.AppSQLite;
 import fi.unju.edu.ar.tpfinal.Views.RegistroProducto;
 
 /**
@@ -19,7 +19,7 @@ public class ProductoInteractorImp implements ProductoInteractor {
 
     @Override
     public void agregarProducto(ProductoPresenter productoPresenter , Producto producto, RegistroProducto registroProducto) {
-        ProductSQLite con = new ProductSQLite(registroProducto, SQLiteUtils.DB, null, 1);
+        AppSQLite con = new AppSQLite(registroProducto, SQLiteUtils.DB, null, 1);
         SQLiteDatabase db = con.getWritableDatabase();
         ContentValues val = new ContentValues();
 
