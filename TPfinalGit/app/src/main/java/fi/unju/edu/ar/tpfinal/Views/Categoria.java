@@ -13,6 +13,7 @@ package fi.unju.edu.ar.tpfinal.Views;
 
 //Otro comentario
 //Clase de la vista Categoria
+//hola
 public class Categoria extends AppCompatActivity  implements CategoriaView {
     private EditText nombre;
     private CategoriaPresenter categoriaPresenter;
