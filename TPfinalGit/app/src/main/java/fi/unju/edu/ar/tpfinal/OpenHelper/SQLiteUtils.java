@@ -54,6 +54,16 @@ public class SQLiteUtils {
     public  static final  String CATEGORIES = "categories";
     public  static final  String NAME_CATEGORY = "name";
 
+    /**
+     * Utils de tabla list
+     */
+
+    public static final String LIST_TABLE = "CREATE TABLE list ( id_list INTEGER PROMARY KEY AUTOINCREMENT," +
+            " name TEXT, description TEXT)";
+
+    public static final String ID_LIST = "id_list";
+    public static final String NAME_LIST = "name";
+    public static final String DESCRIPTION = "description";
 
 
 }

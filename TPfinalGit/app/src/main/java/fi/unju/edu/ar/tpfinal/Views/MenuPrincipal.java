@@ -200,5 +200,9 @@ public class MenuPrincipal extends AppCompatActivity
      //   categoria.agregar(v);
    // }
 
+        public void navigateNewList(View v){
+            startActivity(new Intent(this,ShoppingList.class));
+        }
+
     }
 

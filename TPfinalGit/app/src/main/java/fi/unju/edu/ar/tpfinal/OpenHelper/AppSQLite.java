@@ -21,6 +21,7 @@ public class AppSQLite extends SQLiteOpenHelper {
         db.execSQL(SQLiteUtils.USER_TABLE);
         db.execSQL(SQLiteUtils.PRODUCTS_TABLE);
         db.execSQL(SQLiteUtils.CATEGORIES_TABLE);
+        db.execSQL(SQLiteUtils.LIST_TABLE);
     }
 
     @Override
@@ -29,6 +30,7 @@ public class AppSQLite extends SQLiteOpenHelper {
             db.execSQL("DROP TABLE IF EXISTS users");
             db.execSQL("DROP TABLE IF EXISTS products");
             db.execSQL("DROP TABLE IF EXISTS categories");
+            db.execSQL("DROP TABLE IF EXISTS list");
             onCreate(db);
         }
     }

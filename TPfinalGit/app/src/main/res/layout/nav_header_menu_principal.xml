@@ -27,9 +27,11 @@
         android:layout_height="20dp"
         android:layout_weight="0.63"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
-        android:text="AÑADE NUEVA LISTA sera un boton "
+        android:icon="@drawable/ic_add_circle_outline"
+        android:text="Nueva Lista"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:onClick="navigateNewList"/>
 
 
 </LinearLayout>
